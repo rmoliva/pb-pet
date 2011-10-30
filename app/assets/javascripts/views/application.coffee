@@ -10,6 +10,8 @@ class Pet.views.Application extends Backbone.View
 
   initialize: ->
     @model.bind('change:result', @showResult, this);
+    @render()
+    @model.set(result:0)
     
   render: ->
     $(@el).html JST['templates/application']()
@@ -36,3 +38,5 @@ class Pet.views.Application extends Backbone.View
   onBtnDiv: ->
     [op1, op2] = @getValues()
     @model.div(op1, op2)
+    
+    

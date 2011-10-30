@@ -9,7 +9,6 @@
 
 
   %body
-    #sidebar{:width => 500, :height => 500}
     #top
     #application
     #footer
@@ -17,26 +16,6 @@
   :javascript
     // application main entry point
     $(document).ready(function() {
-      /* var Sidebar = Backbone.Model.extend({
-        promptColor: function() {
-          var cssColor = prompt("Please enter a CSS color:");
-          this.set({color: cssColor});
-        }
-      });
-
-      window.sidebar = new Sidebar;
-
-      sidebar.bind('change:color', function(model, color) {
-        console.log("change color");
-        $('#sidebar').css({background: color});
-      });
-
-      sidebar.set({color: 'white'});
-
-      sidebar.promptColor();
-      */
-      
       var app = new Pet.views.Application({el: $('#application'), model: new Pet.models.Application()});    
-      app.render();
     });
 
