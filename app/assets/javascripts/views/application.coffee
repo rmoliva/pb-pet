@@ -9,7 +9,7 @@ class Pet.views.Application extends Backbone.View
     "click #btn_div": "onBtnDiv"
 
   initialize: ->
-    @model.bind('change', @showResult, this);
+    @model.bind('change:result', @showResult, this);
     
   render: ->
     $(@el).html JST['templates/application']()
