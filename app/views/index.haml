@@ -1,0 +1,23 @@
+!!! XML
+!!! Strict
+%html
+  %head
+    %title Pet Project
+    %link{:rel=>"shortcut icon", :href=>"/images/favicon.png", :type=>"image/x-icon"}
+    %script{:src=>"/assets/app.js", :type=> 'text/javascript'}
+    %link{:href=> "/assets/app.css",:media=>"all",:rel=>"stylesheet",:type=>"text/css"}
+
+
+  %body
+    #top
+    #application
+    #footer
+
+  %script{:type => "text/javascript", :charset => "utf-8"}
+    /<![CDATA[
+    // application main entry point
+    $(document).ready(function() {
+    // new Stats.views.Application({el: $('#application')});    
+    });
+    /]]>
+
