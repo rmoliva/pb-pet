@@ -1,0 +1,21 @@
+%h1 Prueba de calculadora
+%table
+  %tr
+    %td Op1
+    %td
+      %input{type: "input", id: "op1", name: "op1"}
+  %tr
+    %td Op2
+    %td
+      %input{type: "input", id: "op2", name: "op2"}
+  %tr
+    %td Operation
+    %td
+      %input{type: "button", value: "+", id: "btn_add"}
+      %input{type: "button", value: "-", id: "btn_sub"}
+      %input{type: "button", value: "*", id: "btn_mlt"}
+      %input{type: "button", value: "/", id: "btn_div"}
+  %tr
+    %td Result
+    %td
+      #opt_result

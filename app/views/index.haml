@@ -17,7 +17,8 @@
     /<![CDATA[
     // application main entry point
     $(document).ready(function() {
-    // new Stats.views.Application({el: $('#application')});    
+    var app = new Pet.views.Application({el: $('#application')});    
+    app.render();
     });
     /]]>
 
