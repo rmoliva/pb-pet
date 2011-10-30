@@ -7,5 +7,7 @@
 
 //= require templates/application
 
+//= require models/application
+
 //= require views/application
 
