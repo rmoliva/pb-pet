@@ -64,4 +64,16 @@ class PbPet < Padrino::Application
     haml :index
   end
 
+  post "/calc" do
+    op = params[:op] || 'add'
+    op1, op2 = [params[:op1].to_i, params[:op2].to_i]
+
+    result = case op
+    when 'add' then op1+op2
+    when 'sub' then op1-op2
+    when 'mlt' then op1*op2
+    when 'div' then op1/op2
+    end
+    {:result => result}.to_json
+  end
 end
