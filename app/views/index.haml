@@ -4,7 +4,7 @@
   %head
     %title Pet Project
     %link{:rel=>"shortcut icon", :href=>"/images/favicon.png", :type=>"image/x-icon"}
-    %script{:src=>"/assets/app.js", :type=> 'text/javascript'}
+    %script{:src=>"/assets/calc.js", :type=> 'text/javascript'}
     %link{:href=> "/assets/app.css",:media=>"all",:rel=>"stylesheet",:type=>"text/css"}
 
 
@@ -16,6 +16,6 @@
   :javascript
     // application main entry point
     $(document).ready(function() {
-      var app = new Pet.views.Application({el: $('#application'), model: new Pet.models.Application()});    
+      var app = new Pet.calc.views.Application({el: $('#application'), model: new Pet.calc.models.Application()});    
     });
 

@@ -5,9 +5,9 @@
 //= require lib/haml
 //= require lib/lciberica
 
-//= require templates/application
+//= require calc/templates/application
 
-//= require models/application
+//= require calc/models/application
 
-//= require views/application
+//= require calc/views/application
 

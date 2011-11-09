@@ -76,4 +76,9 @@ class PbPet < Padrino::Application
     end
     {:result => result}.to_json
   end
+  
+  get "/todos" do
+    content_type :html
+    render "todos.html"
+  end    
 end

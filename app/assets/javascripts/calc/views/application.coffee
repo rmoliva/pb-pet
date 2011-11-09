@@ -1,7 +1,7 @@
 
-LCIberica.namespace("Pet.views.Application")
+LCIberica.namespace("Pet.calc.views.Application")
 
-class Pet.views.Application extends Backbone.View
+class Pet.calc.views.Application extends Backbone.View
   events: ->
     "click #btn_add": "onBtnAdd"
     "click #btn_sub": "onBtnSub"
@@ -14,7 +14,7 @@ class Pet.views.Application extends Backbone.View
     @model.set(result:0)
     
   render: ->
-    $(@el).html JST['templates/application']()
+    $(@el).html JST['calc/templates/application']()
     this
 
   showResult: ->

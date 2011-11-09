@@ -1,6 +1,6 @@
-LCIberica.namespace("Pet.models.Application")
+LCIberica.namespace("Pet.calc.models.Application")
 
-class Pet.models.Application extends Backbone.Model
+class Pet.calc.models.Application extends Backbone.Model
     defaults: ->
       result: 0
 
