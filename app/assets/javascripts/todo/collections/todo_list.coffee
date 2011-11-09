@@ -25,7 +25,7 @@ class Pet.todo.collections.TodoList extends Backbone.Collection
   # GUID in the database. This generates the next order number for new items.
   nextOrder: ->
     return 1 if !@length
-    last().get('order') + 1
+    @last().get('order') + 1
 
   # Todos are sorted by their original insertion order.
   comparator: (todo) ->

@@ -1,0 +1,18 @@
+- if (done) { 
+%div{class: "todo done"}
+  .display
+    %input{class: "check", type: "checkbox", checked: "checked"}
+    .todo-text
+    %span{class: "todo-destroy"}
+  .edit
+    %input{class:"todo-input", type: "text", value: ""}
+- } else {
+%div{class: "todo"}
+  .display
+    %input{class: "check", type: "checkbox"}
+    .todo-text
+    %span{class: "todo-destroy"}
+  .edit
+    %input{class:"todo-input", type: "text", value: ""}
+- }
+

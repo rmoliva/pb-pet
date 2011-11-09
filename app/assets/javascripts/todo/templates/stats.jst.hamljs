@@ -1,0 +1,13 @@
+- if (total)
+%span{class:"todo-count"}
+  %span{class:"number"}= remaining
+  %span{class:"word"} items left.
+- if (done)
+%span{class:"todo-clear"}
+  %a{href:"#"}
+    Clear
+    %span{class:"number-done"}>= done
+    completed 
+    %span{class:"word-done"}> item
+    
+

@@ -3,8 +3,8 @@
 
   <head>
     <title>Backbone Demo: Todos</title>
-    <link href="/assets/app.css" media="all" rel="stylesheet" type="text/css"/>
-    <script src="/assets/todos.js"></script>
+    <link href="/assets/todos.css" media="all" rel="stylesheet" type="text/css"/>
+    <script src="/assets/todo.js"></script>
   </head>
 
   <body>
@@ -35,11 +35,6 @@
 
     </div>
 
-    <ul id="instructions">
-      <li>Double-click to edit a todo.</li>
-      <li><a href="../../docs/todos.html">View the annotated source.</a></li>
-    </ul>
-
     <div id="credits">
       Created by
       <br />
@@ -47,7 +42,15 @@
     </div>
 
     <!-- Templates -->
-
+    
+  <script type='text/javascript'>
+    //<![CDATA[
+      // application main entry point
+      $(document).ready(function() {
+        new Pet.todo.views.Application();
+      });
+    //]]>
+  </script>
   </body>
 
 </html>

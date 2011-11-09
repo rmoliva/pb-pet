@@ -13,8 +13,8 @@
 //= require todo/collections/todo_list
 
 //= require todo/views/todo_view
+//= require todo/views/application
 
 // Create our global collection of **Todos**.
 window.Todos = new Pet.todo.collections.TodoList;
-window.App = new AppView;
 

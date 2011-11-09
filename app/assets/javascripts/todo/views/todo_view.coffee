@@ -9,26 +9,23 @@ class Pet.todo.views.TodoView extends Backbone.View
   #... is a list tag.
   tagName:  "li"
 
-  # Cache the template function for a single item.
-  template: _.template($('#item-template').html())
-
   # The DOM events specific to an item.
-  events: 
+  events: ->
     "click .check"              : "toggleDone"
     "dblclick div.todo-text"    : "edit"
     "click span.todo-destroy"   : "clear"
     "keypress .todo-input"      : "updateOnEnter"
 
   # The TodoView listens for changes to its model, re-rendering.
-  initialize: function()
+  initialize: ->
     @model.bind('change', @render, this)
     @model.bind('destroy', @remove, this)
 
   # Re-render the contents of the todo item.
-  render: function()
-    $(@el).html(@template(@model.toJSON()))
-    @setText();
-    @this
+  render: ->
+    $(@el).html JST['todo/templates/item'](@model.toJSON())
+    @setText()
+    this
 
   # To avoid XSS (not that it would be harmful in this particular app),
   # we use `jQuery.text` to set the contents of the todo item.
@@ -54,7 +51,7 @@ class Pet.todo.views.TodoView extends Backbone.View
 
   # If you hit `enter`, we're through editing the item.
   updateOnEnter: (e) ->
-    if (e.keyCode == 13) this.close()
+    @close() if (e.keyCode == 13) 
 
   # Remove this view from the DOM.
   remove: ->
